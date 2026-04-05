@@ -78,16 +78,6 @@ const feedItems = [
     badge: "Live",
     detail: "Variant b2 increases visual tension while preserving tonal coherence.",
   },
-  {
-    title: "Critic",
-    badge: "Live",
-    detail: "Coherence threshold is cleared, but Branch_02 still shows tonal instability.",
-  },
-  {
-    title: "World Builder",
-    badge: "Sync",
-    detail: "Canon registry is reconciling storm-front continuity against frozen lineage.",
-  },
 ];
 
 const inspectorStats = [
@@ -192,7 +182,7 @@ export default function Page() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
-            className="relative"
+            className="relative mx-auto w-[80%] md:w-full"
           >
             <div className="absolute -inset-4 rounded-[2rem] bg-[radial-gradient(circle,rgba(126,215,209,0.12),transparent_55%),radial-gradient(circle_at_bottom,rgba(115,93,255,0.12),transparent_40%)] blur-3xl" />
             <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(16,16,18,0.98),rgba(10,10,12,0.92))] p-4 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl md:p-5">
@@ -215,51 +205,7 @@ export default function Page() {
                 </div>
               </div>
 
-              <div className="mt-4 grid gap-3 md:grid-cols-[0.92fr_1.68fr_1fr]">
-                <div className="space-y-3">
-                  {feedItems.map((item) => (
-                    <div
-                      key={item.title}
-                      className="rounded-[1.2rem] border border-white/8 bg-[linear-gradient(180deg,rgba(19,20,24,0.92),rgba(12,13,17,0.92))] p-3"
-                    >
-                      <div className="flex items-center justify-between gap-2">
-                        <div className="text-[0.58rem] uppercase tracking-[0.24em] text-white/38">
-                          {item.title}
-                        </div>
-                        <div className="rounded-full bg-emerald-400/12 px-2 py-1 text-[0.52rem] uppercase tracking-[0.22em] text-emerald-200">
-                          {item.badge}
-                        </div>
-                      </div>
-                      <p className="mt-3 text-[0.72rem] leading-5 text-white/72">
-                        {item.detail}
-                      </p>
-                    </div>
-                  ))}
-
-                  <div className="rounded-[1.2rem] border border-white/8 bg-[linear-gradient(180deg,rgba(19,20,24,0.92),rgba(12,13,17,0.92))] p-3">
-                    <div className="text-[0.58rem] uppercase tracking-[0.24em] text-white/38">
-                      Generation Timeline
-                    </div>
-                    <div className="mt-4 space-y-3">
-                      {[
-                        { label: "Generation 0", nodes: "1 node" },
-                        { label: "Generation 1", nodes: "3 nodes" },
-                        { label: "Generation 2", nodes: "5 nodes" },
-                      ].map((step) => (
-                        <div
-                          key={step.label}
-                          className="flex items-center justify-between rounded-xl border border-white/6 bg-black/25 px-3 py-2"
-                        >
-                          <div className="text-[0.64rem] uppercase tracking-[0.22em] text-white/45">
-                            {step.label}
-                          </div>
-                          <div className="text-[0.66rem] text-white/65">{step.nodes}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
+              <div className="mt-4 grid gap-3 lg:grid-cols-[1.55fr_0.95fr]">
                 <div className="rounded-[1.5rem] border border-white/8 bg-[linear-gradient(180deg,rgba(17,17,20,0.98),rgba(11,11,14,0.96))] p-4">
                   <div className="flex items-center justify-between">
                     <div className="text-[0.6rem] uppercase tracking-[0.28em] text-white/35">
@@ -276,9 +222,21 @@ export default function Page() {
                     <ControlBar label="Branch Pressure" value="74%" progress="74%" accent />
                   </div>
 
-                  <div className="relative mt-5 h-[25rem] overflow-hidden rounded-[1.4rem] border border-white/8 bg-[linear-gradient(180deg,rgba(12,12,14,0.96),rgba(7,7,10,0.96))]">
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {feedItems.map((item) => (
+                      <div
+                        key={item.title}
+                        className="rounded-full border border-white/8 bg-white/[0.04] px-3 py-1.5 text-[0.58rem] uppercase tracking-[0.2em] text-white/48"
+                      >
+                        {item.title} / {item.badge}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="relative mt-5 h-[20rem] overflow-hidden rounded-[1.4rem] border border-white/8 bg-[linear-gradient(180deg,rgba(12,12,14,0.96),rgba(7,7,10,0.96))] sm:h-[23rem]">
                     <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] opacity-20" />
-                    <div className="absolute left-[18%] top-[46%] h-[7.25rem] w-[7.25rem] rounded-[1.4rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,162,104,0.26),rgba(255,255,255,0.05))] shadow-[0_0_40px_rgba(255,161,96,0.14)]">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(117,81,255,0.18),transparent_26%),radial-gradient(circle_at_25%_80%,rgba(255,163,81,0.14),transparent_28%)]" />
+                    <div className="absolute left-[16%] top-[47%] h-[6rem] w-[6rem] rounded-[1.2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,162,104,0.26),rgba(255,255,255,0.05))] shadow-[0_0_40px_rgba(255,161,96,0.14)] sm:h-[7.25rem] sm:w-[7.25rem] sm:rounded-[1.4rem]">
                       <div className="absolute inset-x-3 bottom-3 rounded-xl bg-black/45 p-2">
                         <div className="text-[0.52rem] uppercase tracking-[0.22em] text-white/45">
                           Root Prompt
@@ -296,10 +254,10 @@ export default function Page() {
                     {branchCards.map((card) => (
                       <div
                         key={card.title}
-                        className={`absolute h-[6.65rem] w-[7.2rem] rounded-[1.2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(14,14,18,0.82),rgba(10,10,14,0.96))] p-2 ${card.position}`}
+                        className={`absolute h-[5.3rem] w-[5.8rem] rounded-[1rem] border border-white/10 bg-[linear-gradient(180deg,rgba(14,14,18,0.82),rgba(10,10,14,0.96))] p-2 sm:h-[6.65rem] sm:w-[7.2rem] sm:rounded-[1.2rem] ${card.position}`}
                       >
                         <div className={`absolute inset-0 rounded-[1.2rem] bg-gradient-to-br ${card.tint}`} />
-                        <div className="relative flex h-full flex-col justify-between rounded-[0.95rem] border border-white/8 bg-black/25 p-2">
+                        <div className="relative flex h-full flex-col justify-between rounded-[0.9rem] border border-white/8 bg-black/25 p-2">
                           <div className="flex items-center justify-between">
                             <div className="text-[0.48rem] uppercase tracking-[0.2em] text-white/45">
                               {card.title}
@@ -308,8 +266,8 @@ export default function Page() {
                               {card.score}
                             </div>
                           </div>
-                          <div className="h-10 rounded-[0.8rem] bg-[linear-gradient(135deg,rgba(48,53,75,0.8),rgba(18,19,26,0.15))]" />
-                          <div className="text-[0.58rem] text-white/78">{card.subtitle}</div>
+                          <div className="h-7 rounded-[0.7rem] bg-[linear-gradient(135deg,rgba(48,53,75,0.8),rgba(18,19,26,0.15))] sm:h-10" />
+                          <div className="text-[0.5rem] text-white/78 sm:text-[0.58rem]">{card.subtitle}</div>
                         </div>
                       </div>
                     ))}
@@ -330,13 +288,19 @@ export default function Page() {
                         Focus
                       </div>
                     </div>
-                    <div className="mt-3 h-36 rounded-[1rem] border border-white/8 bg-[linear-gradient(135deg,rgba(114,56,255,0.35),rgba(15,174,232,0.18),rgba(255,0,140,0.16))]" />
+                    <div className="relative mt-3 h-44 overflow-hidden rounded-[1rem] border border-white/8 bg-[linear-gradient(135deg,rgba(114,56,255,0.35),rgba(15,174,232,0.18),rgba(255,0,140,0.16))]">
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_42%)]" />
+                      <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.38))]" />
+                    </div>
                     <div className="mt-3 text-[0.52rem] uppercase tracking-[0.24em] text-white/40">
                       Current Focus
                     </div>
                     <div className="mt-1 text-lg font-light uppercase tracking-[0.14em] text-white/92">
                       Branch_01
                     </div>
+                    <p className="mt-3 text-[0.72rem] leading-6 text-white/64">
+                      A moody city-night branch with controlled tonal pressure and cinematic dread.
+                    </p>
                   </div>
 
                   <div className="grid grid-cols-2 gap-3">
@@ -355,26 +319,12 @@ export default function Page() {
 
                   <div className="rounded-[1rem] border border-white/8 bg-[linear-gradient(180deg,rgba(18,18,22,0.92),rgba(10,10,14,0.92))] p-3">
                     <div className="text-[0.52rem] uppercase tracking-[0.22em] text-white/38">
-                      Recovered Prompt
+                      Prompt Lineage
                     </div>
                     <div className="mt-3 text-[0.78rem] leading-6 text-white/72">
                       Monolithic storm front / alien vessel implied / wide-lens
                       cinematic dread / continuity locked to Branch_02 lineage.
                     </div>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    {signals.map((signal) => (
-                      <div
-                        key={signal.label}
-                        className="rounded-[1rem] border border-white/8 bg-[linear-gradient(180deg,rgba(18,18,22,0.92),rgba(10,10,14,0.92))] p-3"
-                      >
-                        <div className="text-[0.52rem] uppercase tracking-[0.22em] text-white/38">
-                          {signal.label}
-                        </div>
-                        <div className="mt-2 text-sm text-white/82">{signal.value}</div>
-                      </div>
-                    ))}
                   </div>
                 </div>
               </div>

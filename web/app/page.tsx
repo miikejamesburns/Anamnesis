@@ -1,13 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { AgentNeuralField } from "../components/AgentNeuralField";
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-black text-white relative overflow-hidden">
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/40 via-neutral-950/20 to-black/45" />
-      <AgentNeuralField />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 py-32">
 

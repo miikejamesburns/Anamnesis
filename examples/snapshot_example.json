@@ -1,0 +1,99 @@
+{
+  "snapshot_id": "snap_story_pilot_v1_freeze_0001",
+  "schema_version": "1.0.0",
+  "run": {
+    "run_id": "run_story_pilot_0001",
+    "parent_snapshot_id": null,
+    "stage": "freeze",
+    "workflow": [
+      "generate",
+      "evaluate",
+      "freeze",
+      "evolve"
+    ],
+    "created_at": "2026-04-05T04:00:00Z",
+    "deterministic_seed": "story-pilot-seed-0001"
+  },
+  "task": {
+    "task_id": "task_pilot_episode_outline",
+    "type": "episode_outline",
+    "objective": "Produce a release-ready pilot episode outline with canon-safe world details and visual direction.",
+    "constraints": [
+      "Maintain established world canon.",
+      "Keep output suitable for freeze if evaluation passes.",
+      "Preserve deterministic replay inputs."
+    ]
+  },
+  "role_injections": {
+    "director": "Showrunner",
+    "writer": "Scene Architect",
+    "world": "Canon Steward",
+    "visual": "Shot Designer",
+    "critic": "Release Evaluator"
+  },
+  "agents": {
+    "director": {
+      "model": "director-model-v1",
+      "prompt_hash": "sha256:1d92a08f4f3a0b01b59f645d1c2c4208ef8362f10ec44f4bc20d35f1e8287b6b"
+    },
+    "writer": {
+      "model": "writer-model-v2",
+      "prompt_hash": "sha256:12a7cd37fd6ce4f5bd2e8b1a90d95d9d4292ae6779bd77a3cf2404a9896be7c0"
+    },
+    "world": {
+      "model": "world-model-v1",
+      "prompt_hash": "sha256:5e8cdb1b757ae21999d24fd897d8380a0f09a54457db0d7f9db8b64a1ee1a916"
+    },
+    "visual": {
+      "model": "visual-model-v1",
+      "prompt_hash": "sha256:5c52df8f0c8c776b6bf01534ddf735ce2eb21d89cf8e0f5c1d7f31dd944123f9"
+    },
+    "critic": {
+      "model": "critic-model-v2",
+      "prompt_hash": "sha256:ecdf5912785655f953903ba4eb197415c7ea4570f4056ac9a26fd2ae0d9e2a11"
+    }
+  },
+  "artifacts": [
+    {
+      "artifact_id": "artifact_outline_0001",
+      "kind": "text/outline",
+      "path": "artifacts/pilot/outline_v1.md",
+      "sha256": "4fefcaac8aa0ab95a6f24195eb8a85a3af2ef0df6cdd5352378927e74a7393cc"
+    },
+    {
+      "artifact_id": "artifact_visual_plan_0001",
+      "kind": "application/json",
+      "path": "artifacts/pilot/visual_plan_v1.json",
+      "sha256": "f7be98ddbfab47c8bc1ce587df0db37f4af1b8a4dca3d4122f36dc2c27388666"
+    }
+  ],
+  "evaluation": {
+    "rubric_version": "release-rubric-1.0.0",
+    "scores": {
+      "task_completion": 0.96,
+      "continuity": 0.98,
+      "visual_clarity": 0.93,
+      "policy_compliance": 1.0
+    },
+    "critic_findings": [
+      "Narrative structure meets release threshold.",
+      "World references are canon-safe.",
+      "Visual direction is specific enough for downstream asset generation."
+    ],
+    "decision": "freeze"
+  },
+  "freeze": {
+    "frozen_at": "2026-04-05T04:03:00Z",
+    "release_status": "approved",
+    "registry_entry": "release/pilot/v1"
+  },
+  "evolution": {
+    "branchable": true,
+    "branches": []
+  },
+  "audit": {
+    "initiator": "studio-orchestrator",
+    "policy_version": "policy-1.0.0",
+    "snapshot_hash": "sha256:54bcf53fd4125bfeb0f5194ec0b2482402f21c5c5690ae0fdfc0bd542ccfdce8"
+  }
+}

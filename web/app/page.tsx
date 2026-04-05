@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { AgentNeuralField } from "../components/AgentNeuralField";
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-black text-white relative overflow-hidden">
-
-      {/* BACKGROUND */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-neutral-900 to-black opacity-80" />
+      <AgentNeuralField />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-neutral-950/85 to-black opacity-95" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 py-32">
 
@@ -39,6 +39,17 @@ export default function Page() {
             >
               GitHub
             </a>
+          </div>
+
+          <div className="mt-12 max-w-2xl rounded-2xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur-sm">
+            <div className="text-[0.68rem] uppercase tracking-[0.28em] text-white/40">
+              Live Agent Field
+            </div>
+            <p className="mt-2 text-sm leading-6 text-white/70">
+              The background network represents the active coordination mesh.
+              Touch or move across the field to excite nearby nodes and surface
+              what each core agent is currently processing.
+            </p>
           </div>
         </motion.div>
 

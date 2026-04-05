@@ -81,7 +81,7 @@ export default function Page() {
           className="flex items-center justify-between border-b border-white/10 pb-6"
         >
           <div className="text-[0.72rem] uppercase tracking-[0.32em] text-white/45">
-            Television Memory System
+            Agentic Film and Television Creation System
           </div>
           <a
             href="https://github.com/miikejamesburns/Anamnesis"

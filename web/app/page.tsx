@@ -163,11 +163,13 @@ export default function Page() {
             </p>
 
             <p className="mt-6 max-w-2xl text-[0.95rem] leading-8 text-white/58 md:text-[1.02rem]">
-              The stack combines gated agent orchestration, snapshot lineage,
-              evaluation logic, and visual review tooling. FiftyOne operates as
-              the main image organization brain, giving the system a durable way
-              to inspect, sort, compare, and recover visual branches across the
-              wider production memory.
+              The original intent is a hybrid local/cloud evolving AI system:
+              local generation and media workflows running through ComfyUI,
+              gated orchestration and branch logic managing development state,
+              and cloud services extending evaluation, storage, and coordination.
+              FiftyOne acts as the main image organization brain, giving the
+              system a durable way to inspect, sort, compare, and recover visual
+              branches across the wider production memory.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">

@@ -17,7 +17,7 @@ export default function Page() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-3xl md:text-5xl tracking-[0.35em] font-light">
+          <h1 className="text-3xl md:text-4xl tracking-[0.22em] font-light">
             ANAMNΞSIS
           </h1>
 

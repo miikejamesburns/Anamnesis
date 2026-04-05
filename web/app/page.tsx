@@ -162,6 +162,14 @@ export default function Page() {
               memory rather than discarded as one-shot output.
             </p>
 
+            <p className="mt-6 max-w-2xl text-[0.95rem] leading-8 text-white/58 md:text-[1.02rem]">
+              The stack combines gated agent orchestration, snapshot lineage,
+              evaluation logic, and visual review tooling. FiftyOne operates as
+              the main image organization brain, giving the system a durable way
+              to inspect, sort, compare, and recover visual branches across the
+              wider production memory.
+            </p>
+
             <div className="mt-10 flex flex-wrap gap-4">
               <a
                 href="https://github.com/miikejamesburns/Anamnesis"

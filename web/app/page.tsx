@@ -17,12 +17,13 @@ export default function Page() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-[2.625rem] md:text-[3.15rem] tracking-[0.18em] font-light">
+          <h1 className="text-[3.15rem] md:text-[3.78rem] tracking-[0.18em] font-light">
             ANAMNΞSIS
           </h1>
 
-          <p className="mt-6 text-white/60 italic">
-            “Learning is recollection.” — Socrates
+          <p className="mt-6 text-white/60 text-sm italic md:text-base">
+            “People do not learn anything new. They merely remember what they
+            already know.” — Socrates
           </p>
 
           <p className="mt-8 text-white/80 text-lg max-w-2xl leading-relaxed">

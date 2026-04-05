@@ -45,7 +45,7 @@ export default function Page() {
           title="Execution Model"
           content={[
             "Generate → Evaluate → Freeze → Evolve",
-            "Each stage is gated and must pass evaluation before progressing."
+            "Each stage is gated, recorded, and reviewed so outputs move through a controlled lifecycle instead of jumping straight from generation into release."
           ]}
         />
 
@@ -53,7 +53,7 @@ export default function Page() {
           title="Agent System"
           content={[
             "5 core agents: Director, Writer, World, Visual, Critic",
-            "Dynamic role injection instead of static pipelines"
+            "Dynamic role injection lets the same core agents adapt to different creative tasks without fragmenting the system into dozens of brittle, single-purpose pipelines."
           ]}
         />
 
@@ -61,7 +61,7 @@ export default function Page() {
           title="Determinism"
           content={[
             "Every output is snapshot-based and reproducible",
-            "Full audit trail across agent decisions"
+            "Full audit trails capture prompts, decisions, evaluations, and branch history so every result can be replayed, inspected, and improved from known state."
           ]}
         />
 
@@ -69,7 +69,7 @@ export default function Page() {
           title="Why This Matters"
           content={[
             "Most AI systems are stateless and unreliable",
-            "Anamnesis introduces lifecycle, memory, and accountability"
+            "Anamnesis introduces lifecycle, memory, and accountability so television development work can evolve with continuity, reviewability, and production-grade control."
           ]}
         />
 

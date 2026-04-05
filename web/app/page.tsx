@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <main className="min-h-screen bg-black text-white relative overflow-hidden">
       <AgentNeuralField />
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-neutral-950/85 to-black opacity-95" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-neutral-950/55 to-black/75" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 py-32">
 

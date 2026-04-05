@@ -135,19 +135,19 @@ export function AgentNeuralField() {
       onPointerLeave={() => setPointer({ x: 50, y: 22, active: false })}
     >
       <motion.div
-        className="absolute inset-0"
+        className="absolute inset-0 mix-blend-screen"
         animate={{
           background: [
-            "radial-gradient(circle at 20% 20%, rgba(120,140,255,0.12), transparent 35%), radial-gradient(circle at 78% 24%, rgba(255,255,255,0.08), transparent 28%), radial-gradient(circle at 50% 70%, rgba(120,255,225,0.08), transparent 34%)",
-            "radial-gradient(circle at 24% 26%, rgba(120,140,255,0.14), transparent 36%), radial-gradient(circle at 75% 28%, rgba(255,255,255,0.07), transparent 30%), radial-gradient(circle at 48% 68%, rgba(120,255,225,0.1), transparent 34%)",
-            "radial-gradient(circle at 20% 20%, rgba(120,140,255,0.12), transparent 35%), radial-gradient(circle at 78% 24%, rgba(255,255,255,0.08), transparent 28%), radial-gradient(circle at 50% 70%, rgba(120,255,225,0.08), transparent 34%)",
+            "radial-gradient(circle at 20% 20%, rgba(120,140,255,0.2), transparent 35%), radial-gradient(circle at 78% 24%, rgba(255,255,255,0.12), transparent 28%), radial-gradient(circle at 50% 70%, rgba(120,255,225,0.14), transparent 34%)",
+            "radial-gradient(circle at 24% 26%, rgba(120,140,255,0.24), transparent 36%), radial-gradient(circle at 75% 28%, rgba(255,255,255,0.1), transparent 30%), radial-gradient(circle at 48% 68%, rgba(120,255,225,0.16), transparent 34%)",
+            "radial-gradient(circle at 20% 20%, rgba(120,140,255,0.2), transparent 35%), radial-gradient(circle at 78% 24%, rgba(255,255,255,0.12), transparent 28%), radial-gradient(circle at 50% 70%, rgba(120,255,225,0.14), transparent 34%)",
           ],
         }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
       />
 
       <motion.div
-        className="absolute h-80 w-80 rounded-full bg-white/10 blur-3xl"
+        className="absolute h-96 w-96 rounded-full bg-white/20 blur-3xl"
         animate={{
           left: `${pointer.x}%`,
           top: `${pointer.y}%`,
@@ -177,8 +177,8 @@ export function AgentNeuralField() {
               y1={start.y}
               x2={end.x}
               y2={end.y}
-              stroke="rgba(255,255,255,0.18)"
-              strokeWidth={0.12 * strength}
+              stroke="rgba(255,255,255,0.28)"
+              strokeWidth={0.18 * strength}
               initial={{ opacity: 0.12 }}
               animate={{ opacity: [0.12, 0.34, 0.12] }}
               transition={{
@@ -200,9 +200,9 @@ export function AgentNeuralField() {
               cx={node.x}
               cy={node.y}
               r={0.34 * scale}
-              fill="rgba(255,255,255,0.9)"
-              initial={{ opacity: 0.42 }}
-              animate={{ opacity: [0.35, 0.95, 0.35] }}
+              fill="rgba(255,255,255,0.98)"
+              initial={{ opacity: 0.55 }}
+              animate={{ opacity: [0.5, 1, 0.5] }}
               transition={{
                 duration: 3.4 + (index % 4),
                 repeat: Infinity,
@@ -223,7 +223,7 @@ export function AgentNeuralField() {
                 cy={agent.y}
                 r={1.05 * scale}
                 fill={agent.color}
-                animate={{ opacity: [0.55, 1, 0.55] }}
+                animate={{ opacity: [0.7, 1, 0.7] }}
                 transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
               />
               <motion.circle
@@ -233,7 +233,7 @@ export function AgentNeuralField() {
                 fill="none"
                 stroke={agent.color}
                 strokeWidth="0.18"
-                animate={{ opacity: [0.08, 0.3, 0.08], scale: [0.92, 1.08, 0.92] }}
+                animate={{ opacity: [0.16, 0.42, 0.16], scale: [0.92, 1.12, 0.92] }}
                 transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}
               />
             </motion.g>

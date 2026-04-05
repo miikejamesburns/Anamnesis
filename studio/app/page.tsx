@@ -11,7 +11,7 @@ export default function Page() {
 
         {/* HERO */}
         <div>
-          <h1 className="text-4xl md:text-6xl tracking-[0.3em] font-light">
+          <h1 className="text-[1.6875rem] md:text-[2.8125rem] tracking-[0.3em] font-light">
             ANAMNΞSIS
           </h1>
 

@@ -135,7 +135,7 @@ export default function Page() {
           </a>
         </motion.header>
 
-        <section className="grid gap-16 py-14 md:grid-cols-[1.05fr_0.95fr] md:py-20">
+        <section className="grid gap-16 py-14 md:grid-cols-[1fr_1fr] md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -146,23 +146,23 @@ export default function Page() {
               Gated Narrative Intelligence
             </div>
 
-            <h1 className="max-w-4xl text-[2.865rem] font-light uppercase tracking-[0.18em] text-white md:text-[3.438rem] lg:text-[5.5rem] lg:leading-[0.92]">
+            <h1 className="max-w-3xl text-[2.5rem] font-light uppercase tracking-[0.16em] text-white md:text-[3rem] lg:text-[4.7rem] lg:leading-[0.94]">
               AnamnΞsis
             </h1>
 
-            <p className="mt-3 max-w-xl text-[0.7rem] italic text-white/55 md:text-[0.8rem]">
+            <p className="mt-3 max-w-lg text-[0.66rem] italic text-white/55 md:text-[0.76rem]">
               “People do not learn anything new. They merely remember what they
               already know.” — Socrates
             </p>
 
-            <p className="mt-10 max-w-3xl text-lg leading-9 text-white/78 md:text-[1.3rem]">
+            <p className="mt-8 max-w-2xl text-[1rem] leading-8 text-white/78 md:text-[1.12rem]">
               Anamnesis Studio is a television production-oriented AI system for
               controlled story development. It treats generation as part of a
               larger lifecycle: evaluated, frozen, replayable, and evolved with
               memory rather than discarded as one-shot output.
             </p>
 
-            <div className="mt-12 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-wrap gap-4">
               <a
                 href="https://github.com/miikejamesburns/Anamnesis"
                 className="rounded-full bg-[var(--accent-gold)] px-6 py-3 text-sm font-medium text-black transition hover:brightness-110"

@@ -21,7 +21,7 @@ export default function Page() {
             ANAMNΞSIS
           </h1>
 
-          <p className="mt-6 text-white/60 text-sm italic md:text-base">
+          <p className="mt-2 text-[0.7rem] text-white/60 italic md:text-[0.8rem]">
             “People do not learn anything new. They merely remember what they
             already know.” — Socrates
           </p>

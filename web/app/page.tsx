@@ -26,8 +26,9 @@ export default function Page() {
           </p>
 
           <p className="mt-8 text-white/80 text-lg max-w-2xl leading-relaxed">
-            A production-oriented AI system exploring how agents can evolve,
-            evaluate, and improve over time — instead of generating one-shot outputs.
+            A television production-oriented AI system exploring how agents can
+            evolve, evaluate, and improve over time — instead of generating
+            one-shot outputs.
           </p>
 
           <div className="mt-10 flex gap-4">
